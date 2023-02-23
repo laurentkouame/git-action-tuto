@@ -1,10 +1,16 @@
-name: Execution du runner depuis github Action
+name: GITHUB ACTION TEST
 
-  on: push
-  
-    jobs:
-      init:
-        run-on: self-hosted
-        steps: 
-          - run: print("Hello"
-          - run: print("Mon premier github action"
+on:
+  push:
+    branches: [$master]
+  pull_request:
+    branches: [$master]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run:  print("Hello")
