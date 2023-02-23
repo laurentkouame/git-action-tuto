@@ -4,7 +4,7 @@ name: Execution du runner depuis github Action
   
     jobs:
       init:
-        run-on: f
+        run-on: self-hosted
         steps: 
           - run: print("Hello"
           - run: print("Mon premier github action"
