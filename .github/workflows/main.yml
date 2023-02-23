@@ -1,0 +1,10 @@
+name: Execution du runner depuis github Action
+
+  on: push
+  
+    jobs:
+      init:
+        run-on: f
+        steps: 
+          - run: print("Hello"
+          - run: print("Mon premier github action"
